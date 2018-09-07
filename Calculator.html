@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>calculater</title>
+        <link rel="stylesheet" href="Calculator.css">
+    </head>
+
+    <body>
+
+              <input type="text" id ="firstnumber" placeholder="put firstnumber"><br />
+              <input type="text" id ="seconnumber" placeholder="put seconnumber"><br />
+              <button id="plusButton" onclick="getSum()">+</button>
+              <button id="minusButton" onclick="minus()">-</button>
+              <button id="multiplyButton" onclick="multiply()">x</button>
+              <button id="divideButton" onclick="divide()">÷</button><br />
+              <div id="output" ></div>
+
+              <script>
+                  var fnumber =document.getElementById("firstnumber");
+                  var snumber =document.getElementById("seconnumber");
+                  var output =document.getElementById("output");
+
+                  function getSum(){
+                      var sum=parseInt(snumber.value)+parseInt(fnumber.value);
+                      showResult(sum);
+                  }
+
+                  function minus(){
+                      var sum=parseInt(snumber.value)-parseInt(fnumber.value);
+                      showResult(sum);
+                  }
+
+                  function multiply(){
+                      var sum=parseInt(snumber.value)*parseInt(fnumber.value);
+                      showResult(sum);
+                  }
+
+                  function divide(){
+                      var sum=parseInt(snumber.value)/parseInt(fnumber.value);
+                      showResult(sum);
+                  }
+
+
+                   function showResult(result){
+                     output.innerHTML="answer =  "+result;
+                  }
+
+
+              </script>
+
+
+
+
+    </body>
+</html>
